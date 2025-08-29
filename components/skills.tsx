@@ -14,7 +14,7 @@ export default function Skills() {
   const { t } = useI18n()
   return (
     <Section id="skill" title={t("section.skill.title")} subtitle={t("section.skill.subtitle")}>
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-3 gap-6">
         {skillGroups.map((g) => (
           <div key={g.category} className="border rounded-lg p-5 bg-card/50">
             <h3 className="font-semibold mb-3">{g.category}</h3>
@@ -23,7 +23,9 @@ export default function Skills() {
                 <li key={s.name} className="flex items-center justify-between">
                   <span>{s.name}</span>
                   {s.level ? (
-                    <span className={`text-xs px-2 py-1 rounded-md border ${levelToBadge[s.level]}`}>{s.level}</span>
+                    <span className={`text-xs px-2 py-1 rounded-md border ${levelToBadge[s.level]}`}>
+                      {t(`level.${s.level}` as any)}
+                    </span>
                   ) : null}
                 </li>
               ))}

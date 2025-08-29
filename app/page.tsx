@@ -2,6 +2,7 @@
 import { useI18n } from "@/lib/i18n";
 import Navbar from "@/app/navbar/navbar";
 import About from "@/components/about";
+import Experience from "@/components/experience";
 import Work from "@/components/work";
 import Skills from "@/components/skills";
 import Contact from "@/components/contact";
@@ -28,6 +29,7 @@ export default function Home() {
       </header>
       <main>
         <About />
+        <Experience />
         <Work />
         <Skills />
         <Contact />

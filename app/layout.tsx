@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Kittiphan • Portfolio",
   description: "Developer portfolio built with Next.js, Tailwind CSS, and shadcn/ui",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#0b0b0b" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b0b0b" },
+  ],
 };
 
 export default function RootLayout({
@@ -24,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+  <html lang="en" className="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
