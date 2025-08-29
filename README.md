@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## KTP Portfolio
 
-## Getting Started
+พอร์ตโฟลิโอนักพัฒนาเว็บ สร้างด้วย Next.js + React + TypeScript และ Tailwind CSS รองรับสองภาษา (ไทย/อังกฤษ) ออกแบบให้เรียบง่าย โหลดไว และแก้ไขง่าย
 
-First, run the development server:
+### คุณสมบัติเด่น
+- Next.js App Router (v15) + React 19 + TypeScript
+- Tailwind CSS v4 พร้อม utility-first design
+- โครงสร้างคอมโพเนนต์ที่อ่านง่ายและนำกลับใช้ซ้ำได้ (เช่น `Section`, `Navbar`, ปุ่มใน `components/ui`)
+- i18n แบบเบาๆ ด้วย React Context (`lib/i18n.tsx`) สลับภาษาไทย/อังกฤษและจดจำใน localStorage
+- ส่วนต่าง ๆ ครบถ้วน: About, Work, Skills, Experience, Contact
+- ไอคอนจาก `lucide-react`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### เทคโนโลยีหลัก
+- Next.js 15, React 19, TypeScript
+- Tailwind CSS 4
+- Radix Slot, class-variance-authority, tailwind-merge (สไตล์ shadcn/ui primitives)
+- ESLint 9
+
+---
+
+## โครงสร้างโปรเจกต์ (ย่อ)
+
+```
+app/
+	layout.tsx         # โครงหน้าหลัก
+	page.tsx           # หน้าแรก
+	globals.css        # สไตล์หลัก
+	components/
+		navbar/
+			navbar.tsx
+		skill/
+			skill.tsx
+components/
+	about.tsx
+	contact.tsx
+	experience.tsx
+	section.tsx        # คอมโพเนนต์ Section ที่นำกลับใช้ได้
+	skills.tsx
+	work.tsx
+	ui/
+		button.tsx
+lib/
+	i18n.tsx           # ระบบแปลภาษาแบบง่าย (TH/EN)
+public/images/       # รูปภาพต่าง ๆ
+utils/
+	data.ts            # ข้อมูลโปรเจกต์/สกิล
+	links.ts           # ลิงก์โซเชียลและที่ติดต่อ
+	type.ts            # ประเภทข้อมูลที่ใช้ร่วมกัน
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## การใช้งาน (Getting Started)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ข้อกำหนดเบื้องต้น: ติดตั้ง Node.js รุ่น LTS และตัวจัดการแพ็กเกจ (npm/yarn/pnpm)
 
-## Learn More
+ติดตั้งแพ็กเกจ
 
-To learn more about Next.js, take a look at the following resources:
+```powershell
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+รันโหมดพัฒนา (ใช้ Turbopack)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```powershell
+npm run dev
+```
 
-## Deploy on Vercel
+เปิดเบราว์เซอร์ที่ http://localhost:3000
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+สร้างไฟล์สำหรับโปรดักชัน
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```powershell
+npm run build
+```
+
+รันโปรดักชัน
+
+```powershell
+npm start
+```
+
+ตรวจโค้ดด้วย ESLint
+
+```powershell
+npm run lint
+```
+
+---
+
+## การปรับแต่ง
+
+- ข้อความและคำแปล: แก้ไขที่ `lib/i18n.tsx` ภายในตัวแปร `dict` แล้วเรียกใช้ `useI18n().t("key")` ในคอมโพเนนต์
+- ข้อมูลโปรเจกต์/สกิล/ลิงก์: ปรับที่ `utils/data.ts`, `utils/links.ts`, และชนิดข้อมูลที่ `utils/type.ts`
+- คอมโพเนนต์ส่วนต่าง ๆ: อยู่ใน `components/*` และ `app/components/*`
+- สไตล์รวม: `app/globals.css`
+- โครงสร้างหน้าและเมตา: `app/layout.tsx` และไฟล์ใน `app/`
+
+### เพิ่ม/ขยายภาษา
+หากต้องการเพิ่มภาษาอื่น ๆ:
+1) เพิ่มรหัสภาษาใน `type Lang = "th" | "en"` ที่ `lib/i18n.tsx`
+2) เติมคำแปลใน `dict` ให้ครบทุกคีย์
+3) อัปเดต UI สลับภาษาตามต้องการ (ปัจจุบันมีปุ่มสลับภาษาและเก็บค่าที่ localStorage คีย์ `lang`)
+
+---
+
+## การดีพลอย
+
+แนะนำให้ดีพลอยด้วย Vercel (รองรับ Next.js โดยตรง):
+- เชื่อมต่อรีโพไปยัง Vercel และ Import โปรเจกต์
+- Build Command: `next build` (ใช้ค่ามาตรฐานของ Vercel ได้)
+- Output: ใช้ค่าเริ่มต้นสำหรับ Next.js App Router
+- Runtime: แนะนำ Node.js LTS
+
+---
+
+## ใบอนุญาต
+
+โปรเจกต์นี้สำหรับผลงานส่วนตัว หากต้องการใช้งานต่อ กรุณา Fork และปรับแต่งตามความเหมาะสม
+
+—
+
+Short English note: This is a personal developer portfolio built with Next.js, React, TypeScript, and Tailwind CSS, featuring lightweight i18n (TH/EN) and reusable components.
