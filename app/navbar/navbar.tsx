@@ -34,7 +34,7 @@ const Navbar = () => {
     return (
         <div className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/70 bg-background/80 border-b">
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-                <a href="#top" className="font-bold tracking-tight text-lg">Kittiphan</a>
+                <a href="#top" className="font-bold tracking-tight text-lg" aria-label="Home">Kittiphan</a>
                 <nav className="hidden md:flex items-center gap-6">
                                         {navLinks.map((l) => (
                                                                         <a
@@ -46,7 +46,7 @@ const Navbar = () => {
                                                             ? "text-foreground after:w-full after:bg-primary"
                                                             : "text-muted-foreground hover:text-foreground after:w-0 hover:after:w-full after:bg-primary/80")
                                                     }
-                                                                            aria-current={active === l.href ? "location" : undefined}
+                                                    aria-current={active === l.href ? "page" : undefined}
                                                 >
                             {/* Map known labels via keys for i18n; fallback to original label */}
                             {l.href === "#about" ? t("nav.about") :
@@ -68,8 +68,8 @@ const Navbar = () => {
                             <a href="#contact">{t("nav.contact")}</a>
                         </Button>
                     </div>
-                    <Button onClick={toggle} size="sm" variant="ghost" aria-label="Toggle language">
-                        {lang === "th" ? "TH" : "EN"}
+                    <Button onClick={toggle} size="sm" variant="ghost" aria-label={t("lang.switch")} title={t("lang.switch")}>
+                        {lang === "th" ? t("lang.TH") : t("lang.EN")}
                     </Button>
                 </div>
             </div>

@@ -31,7 +31,7 @@ export const projects: Project[] = [
 
 export const skillGroups: SkillGroup[] = [
   {
-    category: "Frontend",
+  category: "frontend",
     items: [
       { name: "CSS", level: "advanced" },
       { name: "JavaScript", level: "advanced" },
@@ -43,7 +43,7 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    category: "Backend",
+  category: "backend",
     items: [
       { name: "PHP", level: "advanced" },
       { name: "MySQL", level: "advanced" },
@@ -55,7 +55,7 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    category: "Tool",
+  category: "tool",
     items: [
       { name: "Git/GitHub", level: "advanced" },
       { name: "REST API", level: "intermediate" },

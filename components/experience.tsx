@@ -9,25 +9,25 @@ export default function Experience() {
     <Section id="experience" title={t("section.experience.title")} subtitle={t("section.experience.subtitle")}>
       <div className="space-y-4">
         {experiences.map((exp) => (
-          <article key={exp.id} className="border rounded-lg p-5 bg-card/50">
+            <article key={exp.id} className="border rounded-lg p-5 bg-card/50">
             <div className="flex items-center justify-between gap-4">
               <div>
-                <h3 className="text-lg font-semibold tracking-tight">{exp.role}</h3>
-                <p className="text-sm text-muted-foreground">{exp.company}</p>
+              <h3 className="text-lg font-semibold tracking-tight">{t(`experience.${exp.id}.role`) || exp.role}</h3>
+              <p className="text-sm text-muted-foreground">{t(`experience.${exp.id}.company`) || exp.company}</p>
               </div>
               <div className="text-right text-xs text-muted-foreground">
-                <div>{exp.period}</div>
-                {exp.location ? <div>{exp.location}</div> : null}
+              <div>{t(`experience.${exp.id}.period`) || exp.period}</div>
+              {exp.location ? <div>{t(`experience.${exp.id}.location`) || exp.location}</div> : null}
               </div>
             </div>
-            {exp.details && exp.details.length ? (
-              <ul className="mt-3 list-disc pl-5 text-sm space-y-1">
-                {exp.details.map((d, i) => (
-                  <li key={i}>{d}</li>
-                ))}
-              </ul>
-            ) : null}
-          </article>
+            <ul className="mt-3 list-disc pl-5 text-sm space-y-1">
+              <li>{t(`experience.${exp.id}.details`) || exp.details?.[0]}</li>
+              <li>{t(`experience.${exp.id}.details1`) || exp.details?.[1]}</li>
+              {exp.details?.slice(2).map((d, i) => (
+              <li key={i + 2}>{t(`experience.${exp.id}.details${i + 2}`) || d}</li>
+              ))}
+            </ul>
+            </article>
         ))}
       </div>
     </Section>
