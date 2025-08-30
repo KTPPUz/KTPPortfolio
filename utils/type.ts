@@ -35,6 +35,7 @@ export type Contact = {
 
 export type Experience = {
 	id: string
+	image: string
 	company: string
 	role: string
 	period: string

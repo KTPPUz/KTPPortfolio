@@ -78,6 +78,7 @@ export const contact: Contact = {
 export const experiences: Experience[] = [
   {
     id: "e1",
+    image: "/images/kml.png",
     company: "Kumwell Corporation PLC.",
     role: "Software Engineer",
     period: "13/05/2025 – Present",
