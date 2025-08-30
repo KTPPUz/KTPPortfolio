@@ -72,7 +72,7 @@ export const contact: Contact = {
   email: "kittiphan.kb@gmail.com",
   github: "https://github.com/KTPPUz",
 //   linkedin: "https://linkedin.com/in/yourname",
-  location: "Bangkok, Thailand",
+  location: "Nonthaburi, Thailand",
 }
 
 export const experiences: Experience[] = [

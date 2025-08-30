@@ -36,24 +36,24 @@ const Navbar = () => {
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
                 <a href="#top" className="font-bold tracking-tight text-lg" aria-label="Home">Kittiphan</a>
                 <nav className="hidden md:flex items-center gap-6">
-                                        {navLinks.map((l) => (
-                                                                        <a
-                                                    key={l.href}
-                                                    href={l.href}
-                                                    className={
-                                                        `relative text-sm transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:transition-all ` +
-                                                        (active === l.href
-                                                            ? "text-foreground after:w-full after:bg-primary"
-                                                            : "text-muted-foreground hover:text-foreground after:w-0 hover:after:w-full after:bg-primary/80")
-                                                    }
-                                                    aria-current={active === l.href ? "page" : undefined}
-                                                >
+                    {navLinks.map((l) => (
+                        <a
+                            key={l.href}
+                            href={l.href}
+                            className={
+                                `relative text-sm transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:transition-all ` +
+                                (active === l.href
+                                    ? "text-foreground after:w-full after:bg-primary"
+                                    : "text-muted-foreground hover:text-foreground after:w-0 hover:after:w-full after:bg-primary/80")
+                            }
+                            aria-current={active === l.href ? "page" : undefined}
+                        >
                             {/* Map known labels via keys for i18n; fallback to original label */}
                             {l.href === "#about" ? t("nav.about") :
-                             l.href === "#experience" ? t("nav.experience") :
-                             l.href === "#work" ? t("nav.work") :
-                             l.href === "#skill" ? t("nav.skill") :
-                             l.href === "#contact" ? t("nav.contact") : l.label}
+                                l.href === "#experience" ? t("nav.experience") :
+                                    l.href === "#work" ? t("nav.work") :
+                                        l.href === "#skill" ? t("nav.skill") :
+                                            l.href === "#contact" ? t("nav.contact") : l.label}
                         </a>
                     ))}
                 </nav>
