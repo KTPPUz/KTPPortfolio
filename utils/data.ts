@@ -15,16 +15,27 @@ export const projects: Project[] = [
     description:
       "A modern, responsive developer portfolio built with Next.js, Tailwind CSS, and shadcn/ui.",
     tech: ["Next.js", "React", "TypeScript", "Tailwind", "shadcn/ui"],
-    image: "/images/Next.js.png",
+    image: "/images/port.png",
     repo: "https://github.com/KTPPUz/KTPPortfolio",
   },
   {
     id: "p2",
+    title: "Kumwell-Glam",
+    description:
+      "A modern, responsive developer portfolio built with Laravel, Tailwind CSS, and shadcn/ui.",
+    tech: ["Laravel" ,"Tailwind", "PHP", "JavaScript", "CSS"],
+    image: "/images/kumwell.png",
+    // repo: "https://github.com/KTPPUz/kumwellglam",
+    link: "https://kumwell-glam.itfeature.tech/",
+    
+  },
+  {
+    id: "p3",
     title: "Web Application IT-BOOKING",
     description:
       "A web application for booking IT services.",
     tech: ["Bootstrap","Tailwind", "PHP", "JavaScript", "CSS" , "Framework Laravel 11"],
-    image: "/images/lav.png",
+    image: "/images/booking.png",
     link: "https://it-booking.pcru.ac.th/",
   },
 ]
@@ -77,11 +88,23 @@ export const contact: Contact = {
 
 export const experiences: Experience[] = [
   {
+    id: "e2",
+    image: "/images/orange.png",
+    company: "ORANGE TECHNOLOGY SOLUTION COMPANY LIMITED",
+    role: "Software Engineer",
+    period: "08/01/2025 – Present",
+    location: "Bangkok, TH",
+    details: [
+      "วิเคราะห์ ออกแบบและพัฒนาระบบเว็บไซต์ สำหรับลูกค้าขององค์กร.",
+      "โดยใช้ Laravel Framework พร้อมกับ Bootstrap, Tailwind CSS, CSS, PHP, MySQL และ JavaScript เพื่อสร้างระบบที่ทันสมัย ใช้งานง่าย และมีประสิทธิภาพ",
+    ],
+  },
+  {
     id: "e1",
     image: "/images/kml.png",
     company: "Kumwell Corporation PLC.",
     role: "Software Engineer",
-    period: "13/05/2025 – Present",
+    period: "13/05/2025 – 30/12/2025",
     location: "Nonthaburi, TH",
     details: [
       "วิเคราะห์ ออกแบบและพัฒนาระบบเว็บไซต์ ใช้ภายในองค์กร.",

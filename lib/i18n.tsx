@@ -48,11 +48,16 @@ const dict: Dict = {
   // projects (data-driven)
   "project.p1.title": { th: "พอร์ตโฟลิโอ KTP", en: "KTP Portfolio" },
   "project.p1.desc": {
-    th: "พอร์ตโฟลิโอนักพัฒนาสมัยใหม่ รองรับทุกหน้าจอ สร้างด้วย Next.js, Tailwind CSS และ shadcn/ui",
+    th: "พอร์ตโฟลิโอแสดงผลงานนักพัฒนาซอฟต์แวร์สมัยใหม่ที่สร้างด้วย Next.js, Tailwind CSS, และ shadcn/ui.",
     en: "A modern, responsive developer portfolio built with Next.js, Tailwind CSS, and shadcn/ui.",
   },
-  "project.p2.title": { th: "ระบบจองห้องบริการ PCRU", en: "Web Application IT-BOOKING PCRU" },
-  "project.p2.desc": { th: "เว็บแอปสำหรับจองห้องบริการตึกไอที", en: "A web application for booking IT services." },
+  "project.p2.title": { th: "Kumwell-Glam", en: "Kumwell-Glam" },
+  "project.p2.desc": {
+    th: "เว็บไซต์บริษัท คัมเวล คอร์ปอเรชั่น จำกัด (มหาชน) สำหรับงานปีใหม่ประจำปี 2568'",
+    en: "Kumwell Corporation PLC. website for New Year 2025 event",
+  },
+  "project.p3.title": { th: "ระบบจองห้องบริการ PCRU", en: "Web Application IT-BOOKING PCRU" },
+  "project.p3.desc": { th: "เว็บแอปสำหรับจองห้องบริการตึกไอที", en: "A web application for booking IT services." },
 
   // experience
   "nav.experience": { th: "ประวัติการทำงาน", en: "Experience" },
@@ -87,9 +92,16 @@ const dict: Dict = {
   },
 
   // experience (data-driven)
+  "experience.e2.role": { th: "นักพัฒนาซอฟต์แวร์", en: "Software Developer" },
+  "experience.e2.company": { th: "บริษัท ออเร้นจ์ เทคโนโลยี โซลูชั่น จำกัด", en: "ORANGE TECHNOLOGY SOLUTION COMPANY LIMITED" },
+  "experience.e2.period": { th: "08/01/2569 – ปัจจุบัน", en: "08/01/2025 – Present" },
+  "experience.e2.location": { th: "กรุงเทพ, ประเทศไทย", en: "Bangkok, Thailand" },
+  "experience.e2.details": { th: "วิเคราะห์ ออกแบบและพัฒนาระบบเว็บไซต์ สำหรับลูกค้าขององค์กร.", en: "Analyze, design, and develop web applications for the company's clients." },
+  "experience.e2.details1": { th: "โดยใช้ Laravel Framework พร้อมกับ Bootstrap, Tailwind CSS, CSS, PHP, JavaScript, และ MySQL เพื่อสร้างระบบที่ทันสมัย ใช้งานง่าย และมีประสิทธิภาพ", en: "Using Laravel Framework along with Bootstrap, Tailwind CSS, CSS, PHP, JavaScript, and MySQL to create modern, user-friendly, and efficient systems." },
+
   "experience.e1.role": { th: "วิศวกรซอฟต์แวร์", en: "Software Engineer" },
   "experience.e1.company": { th: "บริษัท คัมเวล คอร์ปอเรชั่น จำกัด (มหาชน)", en: "Kumwell Corporation PLC." },
-  "experience.e1.period": { th: "13/05/2568 – ปัจจุบัน", en: "13/05/2025 – Present" },
+  "experience.e1.period": { th: "13/05/2568 – 30/12/2568", en: "13/05/2025 – 30/12/2025" },
   "experience.e1.location": { th: "นนทบุรี, ประเทศไทย", en: "Nonthaburi, Thailand" },
   "experience.e1.details": { th: "วิเคราะห์ ออกแบบและพัฒนาระบบเว็บไซต์ ใช้ภายในองค์กร.", en: "Analyze, design, and develop internal web applications." },
   "experience.e1.details1": { th: "โดยใช้ Laravel Framework พร้อมกับ Bootstrap, Tailwind CSS, CSS, PHP, JavaScript, และ MySQL เพื่อสร้างระบบที่ทันสมัย ใช้งานง่าย และมีประสิทธิภาพ", en: "Using Laravel Framework along with Bootstrap, Tailwind CSS, CSS, PHP, JavaScript, and MySQL to create modern, user-friendly, and efficient systems." },
